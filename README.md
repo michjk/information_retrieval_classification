@@ -55,7 +55,7 @@ tensorboard --logdir=[result_folder_path]
 To view graph of test loss and accuracy
 
 ## Predicting Ensemble Learning and prediction time
-Jupyter notebook, trained model, and vocabulary data are prepared for these tasks. Trained model and vocabulary data are saved in ensemble_learning_related. The Jupyter notebook is saved as Prediction_Time_and_Ensemble_Learning.ipynb. Please run Juypter server for running Juputer notebook.
+Jupyter notebook, trained model, and vocabulary data are prepared for these tasks. Trained model and vocabulary data are saved in ensemble_learning_related. The Jupyter notebook is saved as Prediction_Time_and_Ensemble_Learning.ipynb. Please run Juypter server before running Juputer notebook.
 ```
 jupyter notebook
 ```
