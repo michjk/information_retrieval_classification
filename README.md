@@ -45,6 +45,7 @@ python train_lstm.py --path train_lstm_parameter.json
 
 The result of confusion_matrix, precision, recall, and F1 score is displayed at console output.
 The image of confusion_matrix are saved in result_folder_path/\[branch_name\]_\[commit_date_GMT_0\]_\[time_duration_after_commit\]/confusion_matrix_folder_path
+The vocabulary built from dataset are saved as text_vocab.pkl and label_vocab.pkl in root.
 
 ## View evaluation accuracy and loss with tensorboard
 Please run
@@ -60,7 +61,7 @@ jupyter notebook
 ```
 
 ## Cohen's kappa on test dataset
-The cohen's kappa coefficient are calculated in cohen_kappa.ipynb Jupyter notebook. Please run Juypter server before running Juputer notebook.
+The cohen's kappa coefficient are calculated in cohen_kappa.ipynb Jupyter notebook. The dataset containing 2 version of labeling are saved in ir_test_manual_label.csv Please run Juypter server before running Juputer notebook.
 ```
 jupyter notebook
 ```
