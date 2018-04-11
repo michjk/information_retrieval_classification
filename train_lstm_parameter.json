@@ -15,7 +15,7 @@
     "dev_dataset_path": "ir_test_dataset.csv",
     "use_git": true,
     "result_folder_path": "runs",
-    "saved_model_file_path": "best_model/faq_best_model.model",
+    "saved_model_file_path": "best_model/model.model",
     "train_log_folder_path": "summaries/train",
     "dev_log_folder_path": "summaries/dev",
     "confusion_matrix_folder_path": "summaries/confusion_matrix",
