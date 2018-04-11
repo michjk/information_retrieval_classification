@@ -10,7 +10,7 @@
     "batch_size": 128,
     "lr": 1e-3,
     "weight_decay": 5e-4,
-    "max_text_length": null,
+    "max_text_length": 1000,
     "train_dataset_path": "ir_train_dataset.csv",
     "dev_dataset_path": "ir_test_dataset.csv",
     "use_git": true,
