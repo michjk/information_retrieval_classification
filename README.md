@@ -59,5 +59,10 @@ Jupyter notebook, trained model, and vocabulary data are prepared for these task
 jupyter notebook
 ```
 
+## Cohen's kappa on test dataset
+The cohen's kappa coefficient are calculated in cohen_kappa.ipynb Jupyter notebook. Please run Juypter server before running Juputer notebook.
+```
+jupyter notebook
+```
 
 
