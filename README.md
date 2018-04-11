@@ -5,7 +5,7 @@ Pytorch Implementation for sentiment analysis on product's comment
 Please use Python 3, ubuntu 16.04, Git, and NVIDIA GPU with CUDA toolkit 8 and cUDNN 6. To install python library:
 ```
 pip3 install -r requirements.txt
-python -m spacy download en #for downloading English model for spaCy tokenizer
+python3 -m spacy download en #for downloading English model for spaCy tokenizer
 ```
 If failed please look requirements.txt and install one by one.
 
