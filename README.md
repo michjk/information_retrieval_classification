@@ -43,9 +43,9 @@ LSTM
 python train_lstm.py --path train_lstm_parameter.json
 ```
 
-The result of confusion_matrix, precision, recall, and F1 score is displayed at console output.
-The image of confusion_matrix are saved in result_folder_path/\[branch_name\]_\[commit_date_GMT_0\]_\[time_duration_after_commit\]/confusion_matrix_folder_path
-The vocabulary built from dataset are saved as text_vocab.pkl and label_vocab.pkl in root.
+The result of confusion_matrix, precision, recall, and F1 score is displayed at console output (0 = positive, 1 = neutral, 2 = negative)
+The PNG image of confusion_matrix are saved in result_folder_path/\[branch_name\]_\[commit_date_GMT_0\]_\[time_duration_after_commit\]/confusion_matrix_folder_path
+The vocabulary built from dataset are saved as text_vocab.pkl and label_vocab.pkl in project root folder.
 
 ## View evaluation accuracy and loss with tensorboard
 Please run
@@ -54,8 +54,14 @@ tensorboard --logdir=[result_folder_path]
 ```
 To view graph of test loss and accuracy
 
-## Predicting Ensemble Learning and prediction time
-Jupyter notebook, trained model, and vocabulary data are prepared for these tasks. Trained model and vocabulary data are saved in ensemble_learning_related. The Jupyter notebook is saved as Prediction_Time_and_Ensemble_Learning.ipynb. Please run Juypter server before running Juputer notebook.
+## Run prediction on single model CNN and ensemble learning CNN
+Jupyter notebook, trained model, and vocabulary data are prepared for these tasks. Trained model and vocabulary data are saved in CNN_single_and_ensemble_learning_related folder. The Jupyter notebook is saved as CNN_single_model_and_ensemble_model.ipynb. Please run Juypter server before running Juputer notebook.
+```
+jupyter notebook
+```
+
+## Run prediction on single model LSTM
+Jupyter notebook, trained model, and vocabulary data are prepared for these tasks. Trained model and vocabulary data are saved in LSTM_related folder. The Jupyter notebook is saved as LSTM experiment.ipynb. Please run Juypter server before running Juputer notebook.
 ```
 jupyter notebook
 ```
