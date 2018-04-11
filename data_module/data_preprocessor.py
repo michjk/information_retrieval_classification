@@ -72,23 +72,7 @@ def get_label(label_tensor, label_field):
 
     return label_string
 
-def tokenizer(text):
-    '''
-    Tokenizer, includes clear string and lemmatization
-    '''
-
-    #clean string
-    text = clean_str(text)
-
-    #lemmatized
-    lemmatized = spacy_nlp(text)
-    text = ' '.join([token.lemma_ for token in lemmatized])
-    
-    #tokenizer from tensorflow.preprocessing library
-    tokenizer_re = re.compile(r"[A-Z]{2,}(?![a-z])|[A-Z][a-z]+(?=[A-Z])|[\'\w\-]+", re.UNICODE) 
-    return tokenizer_re.findall(text)
-
-def tokenizer_2(comment):
+def tokenizer(comment):
     comment = comment.strip()
     comment = re.sub(r"[\*\"“”\n\\…\+\-\/\=\(\)‘•:\[\]\|’\!;]", " ", str(comment))
     comment = re.sub(r"[ ]+", " ", comment)
@@ -96,11 +80,13 @@ def tokenizer_2(comment):
     comment = re.sub(r"\,+", ",", comment)
     comment = re.sub(r"\?+", "?", comment)
     comment = clean_str(comment)
+    tokenizer_re = re.compile(r"[A-Z]{2,}(?![a-z])|[A-Z][a-z]+(?=[A-Z])|[\'\w\-]+", re.UNICODE)
+    comment = ' '.join(tokenizer_re.findall(comment))
     return [x.text for x in spacy_nlp.tokenizer(comment) if x.text != " "]
 
 def load_dataset(train_path, dev_path, max_text_length, embedding_dim, tokenizer = tokenizer, dev_ratio = 0.1, pretrained_word_embedding_name = "glove.6B.300d", pretrained_word_embedding_path = None,
     saved_text_vocab_path = "text_vocab.pkl", saved_label_vocab_path = "label_vocab.pkl"):
-    text_field = data.Field(lower=True, tokenize=tokenizer_2, fix_length=max_text_length)
+    text_field = data.Field(lower=True, tokenize=tokenizer, fix_length=max_text_length)
     label_field = data.Field(sequential=False)
 
     print('loading data')
