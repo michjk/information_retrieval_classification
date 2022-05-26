@@ -84,7 +84,7 @@ smmap2==2.0.3
 spacy==2.0.10
 tensorboard==1.7.0
 tensorboard-logger==0.0.4
-tensorflow==1.15.0
+tensorflow==2.6.4
 tensorflow-tensorboard==0.4.0rc3
 termcolor==1.1.0
 terminado==0.8.1
